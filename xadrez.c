@@ -23,5 +23,16 @@ int main (){
         printf("Esquerda\n");
         i++;
     }
+
+    printf("Movimento do Cavalo\n");
+    int cavalo = 0;
+    while(cavalo<1){
+        for(int c = 0; c < 2;c++){
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+        cavalo++;
+    }
+
     return 0;
 }
