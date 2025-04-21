@@ -1,34 +1,45 @@
 #include<stdio.h>
+
+void movimentoTorre(int torre){
+    if (torre > 0){
+        printf("Direita\n");
+        movimentoTorre(torre-1);
+    }
+}
+
+void movimentoBispo (int bispo){
+    if (bispo > 0){
+        printf("Cima\n");
+        printf("Direita\n");
+        movimentoBispo(bispo-1);
+    }
+}
+
+void movimentoRainha (int casas){
+    if(casas > 0){
+        printf("Esquerda\n");
+        movimentoRainha(casas-1);
+    }
+}
+
+
+
 int main (){
         
     printf("Movimento da Torre\n");
     
-    for(int i = 0;i <=4;i++){
-        printf("Direita\n");
-    }
+    movimentoTorre(5);
     
     printf("Movimento do Bispo\n");
-    int i = 0;
-    do{
-        printf("Cima\n");
-        printf("Direita\n");
-        i++;
-       
-    } while(i <=4);
+   
+    movimentoBispo(5);
     
-    printf("Movimento da Rainha\n");
-
-    i = 0;
-    while(i<=7){
-        printf("Esquerda\n");
-        i++;
-    }
-
     printf("Movimento do Cavalo\n");
+
     int cavalo = 0;
     while(cavalo<1){
         for(int c = 0; c < 2;c++){
-            printf("Baixo\n");
+            printf("Cima\n");
         }
         printf("Esquerda\n");
         cavalo++;
